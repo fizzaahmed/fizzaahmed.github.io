@@ -1,36 +1,99 @@
-.vl {
-    border-left: 6px solid black;
-    height: 450px;
-    position: absolute;
-    left: 100%;
+@font-face {
+    font-family: Fira Sans;
+    src: url(FiraSans.ttf);
   }
-.profile-img{
-  width: 275px;
-  height: 302.5px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-li {
-  display: inline;
-}
-.about{
-  margin-left: 30%;
-  margin-right: 30%;
-}
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
 
 body {
-  background-color: #FCEDF4;
+    background-image: url("../public/white-bg.jpg");
+    background-attachment: fixed;
+    font-family: 'Fira Sans';
+}
+a, a:link, a:visited {
+    color: black;
+}
+a:hover {
+    color: darkgray;
+  }
+  
+.spacer {
+    margin-top: 200px;
+}
 
+.bracketed-content-about {
+    position: relative;
+    display: inline-block;
+    padding: 20px; /* Add spacing between the text and the brackets */
+}
+
+.bracketed-content-about::before,
+.bracketed-content-about::after {
+    content: "["; /* Use "[" for the opening bracket and "]" for the closing bracket */
+    font-size: 12rem; /* Adjust size of the brackets */
+    position: absolute;
+    margin-top: -1.5rem;
+    top: 0;
+    transform: translateY(-10%); /* Center vertically relative to the text */
+    
+}
+
+.bracketed-content-about::before {
+    left: -3rem; /* Position to the left of the content */
+}
+
+.bracketed-content-about::after {
+    content: "]"; /* Closing bracket */
+    right: -3rem; /* Position to the right of the content */
+}
+
+.bracketed-content-experience {
+    position: relative;
+    display: inline-block;
+    padding: 20px; /* Add spacing between the text and the brackets */
+}
+
+.bracketed-content-experience::before,
+.bracketed-content-experience::after {
+    content: "["; /* Use "[" for the opening bracket and "]" for the closing bracket */
+    font-size: 12rem; /* Adjust size of the brackets */
+    position: absolute;
+    margin-top: 0rem;
+    top: 0;
+    transform: translateY(-10%); /* Center vertically relative to the text */
+    
+}
+
+.bracketed-content-experience::before {
+    left: -3rem; /* Position to the left of the content */
+}
+
+.bracketed-content-experience::after {
+    content: "]"; /* Closing bracket */
+    right: -3rem; /* Position to the right of the content */
+}
+
+.bracketed-content-hobbies {
+    position: relative;
+    display: inline-block;
+    padding: 20px; /* Add spacing between the text and the brackets */
+    margin-top: 0.5rem;
+}
+
+.bracketed-content-hobbies:before,
+.bracketed-content-hobbies::after {
+    content: "["; /* Use "[" for the opening bracket and "]" for the closing bracket */
+    font-size: 8rem; /* Adjust size of the brackets */
+    position: absolute;
+    margin-top: -1rem;
+    top: 0;
+    transform: translateY(-10%); /* Center vertically relative to the text */
+    
+}
+
+.bracketed-content-hobbies::before {
+    left: -3rem; /* Position to the left of the content */
+}
+
+.bracketed-content-hobbies::after {
+    content: "]"; /* Closing bracket */
+    right: -3rem; /* Position to the right of the content */
 }
