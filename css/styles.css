@@ -1,7 +1,7 @@
 @font-face {
-    font-family: Fira Sans;
-    src: url(FiraSans.ttf);
-  }
+    font-family: 'Fira Sans';
+    src: url('FiraSans.ttf');
+}
 
 body {
     background-image: url("../public/white-bg.jpg");
@@ -43,12 +43,14 @@ a:hover {
     content: "[";
     left: 0;
     transform: translateX(-100%);
+    font-family: 'Arial';
 }
 
 .bracketed-content::after {
     content: "]";
     right: 0;
     transform: translateX(100%);
+    font-family: 'Arial';
 }
 
 /* Responsive adjustments for mobile */
