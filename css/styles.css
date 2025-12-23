@@ -19,81 +19,45 @@ a:hover {
     margin-top: 200px;
 }
 
-.bracketed-content-about {
+.bracketed-content {
     position: relative;
     display: inline-block;
-    padding: 20px; /* Add spacing between the text and the brackets */
+    padding: 1.5em 2em;
 }
 
-.bracketed-content-about::before,
-.bracketed-content-about::after {
-    content: "["; /* Use "[" for the opening bracket and "]" for the closing bracket */
-    font-size: 12rem; /* Adjust size of the brackets */
+.bracketed-content::before,
+.bracketed-content::after {
     position: absolute;
-    margin-top: -1.5rem;
     top: 0;
-    transform: translateY(-10%); /* Center vertically relative to the text */
-    
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: clamp(2.5rem, 10vw, 6rem); /* Responsive font size */
+    line-height: 1;
+    color: inherit;
+    pointer-events: none;
+    user-select: none;
 }
 
-.bracketed-content-about::before {
-    left: -3rem; /* Position to the left of the content */
+.bracketed-content::before {
+    content: "[";
+    left: 0;
+    transform: translateX(-100%);
 }
 
-.bracketed-content-about::after {
-    content: "]"; /* Closing bracket */
-    right: -3rem; /* Position to the right of the content */
+.bracketed-content::after {
+    content: "]";
+    right: 0;
+    transform: translateX(100%);
 }
 
-.bracketed-content-experience {
-    position: relative;
-    display: inline-block;
-    padding: 20px; /* Add spacing between the text and the brackets */
-}
-
-.bracketed-content-experience::before,
-.bracketed-content-experience::after {
-    content: "["; /* Use "[" for the opening bracket and "]" for the closing bracket */
-    font-size: 12rem; /* Adjust size of the brackets */
-    position: absolute;
-    margin-top: 0rem;
-    top: 0;
-    transform: translateY(-10%); /* Center vertically relative to the text */
-    
-}
-
-.bracketed-content-experience::before {
-    left: -3rem; /* Position to the left of the content */
-}
-
-.bracketed-content-experience::after {
-    content: "]"; /* Closing bracket */
-    right: -3rem; /* Position to the right of the content */
-}
-
-.bracketed-content-hobbies {
-    position: relative;
-    display: inline-block;
-    padding: 20px; /* Add spacing between the text and the brackets */
-    margin-top: 0.5rem;
-}
-
-.bracketed-content-hobbies:before,
-.bracketed-content-hobbies::after {
-    content: "["; /* Use "[" for the opening bracket and "]" for the closing bracket */
-    font-size: 8rem; /* Adjust size of the brackets */
-    position: absolute;
-    margin-top: -1rem;
-    top: 0;
-    transform: translateY(-10%); /* Center vertically relative to the text */
-    
-}
-
-.bracketed-content-hobbies::before {
-    left: -3rem; /* Position to the left of the content */
-}
-
-.bracketed-content-hobbies::after {
-    content: "]"; /* Closing bracket */
-    right: -3rem; /* Position to the right of the content */
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+    .bracketed-content {
+        padding: 0.5em 1em;
+    }
+    .bracketed-content::before,
+    .bracketed-content::after {
+        font-size: clamp(1.5rem, 8vw, 3rem);
+    }
 }
